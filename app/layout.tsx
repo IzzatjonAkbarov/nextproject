@@ -6,7 +6,7 @@ import { useState, useCallback } from "react";
 import Image from "next/image";
 
 // Components
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Form,
   FormControl,
