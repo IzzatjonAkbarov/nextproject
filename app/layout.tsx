@@ -29,6 +29,7 @@ import {
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "@/components/provider/reduxProvider"; // Assuming this was in the original
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -129,7 +130,7 @@ export default function RootLayout({
           <div className="flex items-start gap-10">
             <aside className="h-screen inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
               <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
-                <a
+                <Link
                   className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
                   href="https://vercel.com/templates/next.js/admin-dashboard-tailwind-postgres-react-nextjs">
                   <Image
@@ -139,8 +140,8 @@ export default function RootLayout({
                     src={"/favicon.ico"}
                   />
                   <span className="sr-only">Acme Inc</span>
-                </a>
-                <a
+                </Link>
+                <Link
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                   data-state="closed"
                   href="/">
@@ -158,9 +159,9 @@ export default function RootLayout({
                     <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
                     <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                   </svg>
-                </a>
+                </Link>
 
-                <a
+                <Link
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                   data-state="closed"
                   href="#">
@@ -180,8 +181,8 @@ export default function RootLayout({
                     <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
                   </svg>
                   <span className="sr-only">Orders</span>
-                </a>
-                <a
+                </Link>
+                <Link
                   className="flex h-9 w-9 items-center justify-center rounded-lg  transition-colors hover:text-foreground md:h-8 md:w-8 bg-accent text-black" // Adjusted class assuming it was like this
                   data-state="closed"
                   href="/">
@@ -202,8 +203,8 @@ export default function RootLayout({
                     <path d="M12 22V12" />
                   </svg>
                   <span className="sr-only">Products</span>
-                </a>
-                <a
+                </Link>
+                <Link
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                   data-state="closed"
                   href="/customers">
@@ -223,8 +224,8 @@ export default function RootLayout({
                     <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" />
                   </svg>
                   <span className="sr-only">Customers</span>
-                </a>
-                <a
+                </Link>
+                <Link
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                   data-state="closed"
                   href="#">
@@ -243,10 +244,10 @@ export default function RootLayout({
                     <path d="m19 9-5 5-4-4-3 3" />
                   </svg>
                   <span className="sr-only">Analytics</span>
-                </a>
+                </Link>
               </nav>
               <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
-                <a
+                <Link
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                   data-state="closed"
                   href="#">
@@ -265,7 +266,7 @@ export default function RootLayout({
                     <circle cx={12} cy={12} r={3} />
                   </svg>
                   <span className="sr-only">Settings</span>
-                </a>
+                </Link>
               </nav>
             </aside>
             <div className="w-full">
@@ -296,11 +297,11 @@ export default function RootLayout({
                 <nav aria-label="breadcrumb" className="hidden md:flex">
                   <ol className="flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5">
                     <li className="inline-flex items-center gap-1.5">
-                      <a
+                      <Link
                         className="transition-colors hover:text-foreground"
                         href="#">
                         Dashboard
-                      </a>
+                      </Link>
                     </li>
                     <li
                       role="presentation"
@@ -321,11 +322,11 @@ export default function RootLayout({
                       </svg>
                     </li>
                     <li className="inline-flex items-center gap-1.5">
-                      <a
+                      <Link
                         className="transition-colors hover:text-foreground"
                         href="#">
                         Products
-                      </a>
+                      </Link>
                     </li>
                     <li
                       role="presentation"
