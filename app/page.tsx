@@ -2,12 +2,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  setProducts,
-  addProduct,
-  updateProduct,
-  deleteProduct,
-} from "@/redux/productSlice";
+import { setProducts } from "@/redux/productSlice";
 
 import ProductCard from "@/components/customCard";
 
@@ -34,8 +29,6 @@ export default function Home() {
 
   // Correct the selector to match your store structure
   const { products } = useSelector((state: RootState) => state.product);
-
-  const [showAddForm, setShowAddForm] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
